@@ -1,0 +1,22 @@
+package com.socialmedia.commentingsystem.commentingservice.service;
+
+import com.socialmedia.commentingsystem.commentingservice.domain.CommentRequest;
+import com.socialmedia.commentingsystem.commentingservice.entity.Comment;
+import com.socialmedia.commentingsystem.commentingservice.repository.CommentRepository;
+import com.socialmedia.commentingsystem.commentingservice.repository.PostRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class PostService {
+
+    @Autowired
+    private PostRepository postRepository;
+
+    public boolean likePost(String postId) {
+        return true;
+    }
+
+    public void dislike(String postId) {
+    }
+}
