@@ -16,6 +16,7 @@ import java.util.List;
 @Builder
 public class Comment {
     @Id
+    @Field("_id")
     private String id;
     @Field("user_id")
     private String userId;
@@ -28,7 +29,4 @@ public class Comment {
     private Date createdAt;
     @Field("updated_at")
     private Date updatedAt;
-    private List<Comment> replies;
-    private List<Like> likes;
-    private List<Dislike> dislikes;
 }

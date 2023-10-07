@@ -1,8 +1,6 @@
 package com.socialmedia.commentingsystem.commentingservice.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -14,6 +12,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Getter
+@Setter
 public class Post {
     @Id
     private String id;
@@ -24,5 +24,6 @@ public class Post {
     private Date createdAt;
     @Field("updated_at")
     private Date updatedAt;
+    @Field("comments")
     private List<Comment> comments;
 }
